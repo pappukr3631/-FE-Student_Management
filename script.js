@@ -49,8 +49,8 @@ function appendDataToTable(data) {
     const degree_td = document.createElement("td");
     degree_td.innerHTML = `${data.degree}
     <div>
-        <img src="/img/edit1.png" onclick="edit(element)" />
-        <img src="/img/trash-2.png" onclick="deleteElement(element)" />
+        <img src="/img/edit1.png" onclick="edit(this)" />
+        <img src="/img/trash-2.png" onclick="deleteElement(this)" />
     </div>`;
 
     tr.appendChild(id_td);
