@@ -29,13 +29,13 @@ form {
     width: 28%;
     padding: 12px 8px;
     margin: 20px 2%;
-    border: 1px solid white;
+    border: 1px solid lightgray;
 }
 
 #submit {
     width: 40%;
     color: black;
-    background-color: white;
+    background-color: lightgray;
     border: none;
     margin: 20px 2.5%;
     padding: 12px 8px;
@@ -49,7 +49,7 @@ form {
 
 .search-box {
     width: 89vw;
-    border: 1px solid white;
+    border: 1px solid lightgray;
     margin: 50px auto;
 }
 
@@ -67,8 +67,15 @@ table {
     text-align: left;
 }
 
+table, th {
+    border: 1px solid lightgrey;
+}
+
+td {
+    border-right: 1px solid lightgray;
+}
+
 th, td {
-    border: 1px solid white;
     padding: 10px;
     font-weight: 400;
 }

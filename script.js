@@ -7,6 +7,9 @@ let students = [
 // Show Default Data in Table
 showDefaultData();
 function showDefaultData() {
+    // clear the table before showing all the data
+    const tbody = document.getElementById("table-body");
+    tbody.innerHTML = '';
     for(let i=0; i<students.length; i++) {
         appendDataToTable(students[i]);
     }
@@ -19,6 +22,12 @@ function addStudent() {
     const email = document.getElementById("email-input");
     const grade = document.getElementById("grade-input");
     const degree = document.getElementById("degree-input");
+
+    // All fields required
+    if(name.value == '' || age.value == '' || email.value == '' || grade.value == '' || degree.value == '') {
+        alert("All fields required");
+        return;
+    }
 
     let data = {
         ID: getMaxID() + 1,
@@ -107,7 +116,7 @@ function deleteDataFromArray(idToRemove) {
 }
 
 // Edit Student functionality
-let indexToEdit = -1;
+let indexToEdit = 0;
 let rowToEdit = null;
 function edit(element) {
     rowToEdit = element.closest("tr");
