@@ -29,13 +29,13 @@ form {
     width: 28%;
     padding: 12px 8px;
     margin: 20px 2%;
-    border: 1px solid lightgray;
+    border: 1px solid #FFFFFF;
 }
 
 #submit {
     width: 40%;
     color: black;
-    background-color: lightgray;
+    background-color: #FFFFFF;
     border: none;
     margin: 20px 2.5%;
     padding: 12px 8px;
@@ -48,15 +48,16 @@ form {
 /* Search box */
 
 .search-box {
-    width: 89vw;
-    border: 1px solid lightgray;
+    display: flex;
+    width: 90vw;
     margin: 50px auto;
+    justify-content: center;
 }
 
 .search-box input {
     width: 98%;
     padding: 12px 8px;
-    border: none;
+    border: 1px solid #FFFFFF;
 }
 
 /* Table */
@@ -68,11 +69,11 @@ table {
 }
 
 table, th {
-    border: 1px solid lightgrey;
+    border: 1px solid #FFFFFF;
 }
 
 td {
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #FFFFFF;
 }
 
 th, td {
