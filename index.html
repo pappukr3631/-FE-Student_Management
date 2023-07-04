@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student Management</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Form -->
+
+        <h1>Student Management CRUD</h1>
+        <form action="">
+            <div class="flex-div">
+                <input type="text" placeholder="Name" id="name-input" />
+                <input type="text" placeholder="Email" id="email-input" />
+                <input type="text" placeholder="GPA" id="gpa-input" />
+            </div>
+            <div class="flex-div">
+                <input type="text" placeholder="Age" id="age-input" />
+                <input type="text" placeholder="Degree" id="degree-input" />
+            </div>
+            <div class="submit" onclick="getData()">Add Student</div>
+        </form>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input
+                type="text"
+                placeholder="Search by Name, email or degree...   press enter to search"
+                id="search-box"
+                onkeypress="keyPress(event)"
+            />
+        </div>
+
+        <!-- Table -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>GPA</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>1</td>
+                    <td>Name Name Name</td>
+                    <td>email@gmail.com</td>
+                    <td>22</td>
+                    <td>7.8</td>
+                    <td>
+                        BTech
+                        <div>
+                            <img src="/img/edit1.png" onclick="edit()" />
+                            <img src="/img/trash-2.png" onclick="deleteElement(element)" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Name Name Name</td>
+                    <td>email@gmail.com</td>
+                    <td>22</td>
+                    <td>7.8</td>
+                    <td>
+                        BTech
+                        <div>
+                            <img src="/img/edit1.png" onclick="edit()" />
+                            <img src="/img/trash-2.png" onclick="deleteElement(element)" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>
