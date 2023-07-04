@@ -39,8 +39,9 @@ function addStudent() {
 function appendDataToTable(data) {
     const tbody = document.getElementById("table-body");
 
-    // Create elements
+    // Create elements and add inner texts
     const tr = document.createElement("tr");
+
     // Table data elements
     const id_td = document.createElement("td");
     id_td.innerText = data.ID;
@@ -186,3 +187,45 @@ function resetForm() {
     const form = document.getElementById("form");
     form.reset();
 }
+
+
+// Search functionality
+
+var inputElement = document.getElementById("search-box");
+
+inputElement.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+
+    let enteredText = inputElement.value;
+    
+    console.log("Entered text: " + enteredText);
+
+    // 1. clear the table data
+    let table_body = document.getElementById("table-body");
+    table_body.innerHTML = "";
+
+    // If empty string is received: all students will be visible in the table
+    if(enteredText === "") {
+        showDefaultData();
+        console.log("Empty string entered");
+        return;
+    }
+    // 2. Search text in students array
+    for(let i=0; i<students.length; i++) {
+        if(students[i].name == enteredText || students[i].email == enteredText || students[i].degree == enteredText) {
+            // 3. Add the matching list in the table
+            let student = students[i];
+            let data = {
+                ID: student.ID,
+                name: student.name,
+                age: student.age,
+                grade: student.grade,
+                degree: student.degree,
+                email: student.email
+            };
+            appendDataToTable(data);
+        }
+    }
+    console.log("Search complete");
+  }
+});
