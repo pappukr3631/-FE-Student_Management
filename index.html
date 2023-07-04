@@ -10,17 +10,17 @@
         <!-- Form -->
 
         <h1>Student Management CRUD</h1>
-        <form action="">
+        <form action="" id="form">
             <div class="flex-div">
                 <input type="text" placeholder="Name" id="name-input" />
                 <input type="text" placeholder="Email" id="email-input" />
-                <input type="text" placeholder="GPA" id="gpa-input" />
+                <input type="text" placeholder="Grade" id="grade-input" />
             </div>
             <div class="flex-div">
                 <input type="text" placeholder="Age" id="age-input" />
                 <input type="text" placeholder="Degree" id="degree-input" />
             </div>
-            <div class="submit" onclick="getData()">Add Student</div>
+            <div id="submit" onclick="addStudent()">Add Student</div>
         </form>
 
         <!-- Search Box -->
@@ -42,39 +42,11 @@
                     <th>Student Name</th>
                     <th>Email</th>
                     <th>Age</th>
-                    <th>GPA</th>
+                    <th>Grade</th>
                     <th>Degree</th>
                 </tr>
             </thead>
             <tbody id="table-body">
-                <tr>
-                    <td>1</td>
-                    <td>Name Name Name</td>
-                    <td>email@gmail.com</td>
-                    <td>22</td>
-                    <td>7.8</td>
-                    <td>
-                        BTech
-                        <div>
-                            <img src="img/edit 1.svg" onclick="edit(this)" />
-                            <img src="img/trash-2 1.svg" onclick="deleteElement(this)" />
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Name Name Name</td>
-                    <td>email@gmail.com</td>
-                    <td>22</td>
-                    <td>7.8</td>
-                    <td>
-                        BTech
-                        <div>
-                            <img src="img/edit 1.svg" onclick="edit()" />
-                            <img src="img/trash-2 1.svg" onclick="deleteElement(element)" />
-                        </div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 

@@ -32,7 +32,7 @@ form {
     border: 1px solid white;
 }
 
-.submit {
+#submit {
     width: 40%;
     color: black;
     background-color: white;
